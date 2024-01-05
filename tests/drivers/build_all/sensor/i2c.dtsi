@@ -894,3 +894,13 @@ test_i2c_tmd2635: tmd2635@78 {
 	proximity-sample-duration = <31>;
 	wait-time-factor = <0>;
 };
+
+test_i2c_tsl2520: tsl2520@7f {
+	compatible = "ams,tsl2520";
+	reg = <0x7f>;
+	int-gpios = <&test_gpio 0 0>;
+	sample-time = <179>;
+	als-nr-samples = <38>;
+	agc-nr-samples = <19>;
+	als-gains = <128>;
+};
